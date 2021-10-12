@@ -1,8 +1,8 @@
 <div class="content">
     <div class="imageBox">
-        <div class="box" *ngFor="let type of types">
-            <img src="{{type.image}}" class="measurementImage"><br>
-            <span class="labels">{{type.label}}</span>
+        <div class="box"  *ngFor="let type of types" (click)="selectType(type);typename=type" [style.background-color]="type.active? type.background : 'white'" [style.border]="type.active?type.bordercolor: 'white'">
+            <img src="{{type.active?selectedImage:type.image}}" id={{type.label}} class="measurementImage"><br>
+            <span class="labels" [style.color]="type.active? type.color: '#E4E4E4'">{{type.label}}</span>
         </div>
     </div>
     <div class="calculation">
@@ -13,12 +13,7 @@
                 <mat-divider></mat-divider>
                 <mat-form-field appearance="fill" class="selectField">
                     <mat-select [(value)]="selected">
-                        <mat-option value="Meters">Meters</mat-option>
-                        <mat-option value="Kilometers">Kilometers</mat-option>
-                        <mat-option value="Centimeters">Centimeters</mat-option>
-                        <mat-option value="Milimeter">Milimeter</mat-option>
-                        <mat-option value="Micrometer">Micrometer</mat-option>
-                        <mat-option value="Foot">Foot</mat-option>
+                        <mat-option *ngFor="let len of array" value="len.value">{{len.value}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
