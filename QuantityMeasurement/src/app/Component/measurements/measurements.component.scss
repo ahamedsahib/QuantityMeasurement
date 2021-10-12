@@ -1,0 +1,84 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 15px;
+}
+.imageBox{
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    width: 173px;
+    height: 137px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-right: 30px;
+}
+.measurementImage{
+    height: 45px;
+}
+.labels{
+    color: #E4E4E4;
+}
+.calculation{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.inputfield{
+    width: 95.5%;
+    height: 40px;
+    padding-left: 10px;
+    border: unset;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.FromBox{
+    width:280px;
+    border: 1px solid #E0DCDC;
+}
+::ng-deep .selectField
+{
+    font-weight: bolder;
+    padding-bottom: -10px;
+ border-radius: 0px !important;
+    .mat-form-field-underline 
+    {
+        display: none;
+    }
+    .mat-form-field-wrapper 
+    {
+        padding-bottom: 0;
+    }
+    .mat-form-field-infix {
+        border-top: 2px solid transparent;
+    }
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white !important;
+    border-radius: unset !important;
+    width: 280px !important;
+    }
+    ::ng-deep .cdk-overlay-pane{
+        bottom: -70px !important;
+    }
+    ::ng-deep .mat-select-panel {
+    max-width: 270px !important;
+    margin-left: 5px;
+    border-radius: 0px !important;
+    outline: 0;
+}
+::ng-deep .mat-select-value-text {
+    white-space: nowrap;
+    font-family: inherit;
+    font-weight: 600;
+    padding-left: 10px;
+}
+::ng-deep .mat-select-arrow {
+    margin-top: 12px !important;
+}
