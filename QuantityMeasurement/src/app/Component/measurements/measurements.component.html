@@ -25,12 +25,7 @@
                 <mat-divider></mat-divider>
                 <mat-form-field appearance="fill" class="selectField">
                     <mat-select [(value)]="toOption">
-                        <mat-option value="Meters">Meters</mat-option>
-                        <mat-option value="Kilometers">Kilometers</mat-option>
-                        <mat-option value="Centimeters">Centimeters</mat-option>
-                        <mat-option value="Milimeter">Milimeter</mat-option>
-                        <mat-option value="Micrometer">Micrometer</mat-option>
-                        <mat-option value="Foot">Foot</mat-option>
+                        <mat-option *ngFor="let len of array" value="len.value">{{len.value}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
